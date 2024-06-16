@@ -16,7 +16,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  hardware.nvidia.modesetting.enable = true;
   networking.hostName = "powerRats"; # Define your hostname.
 
 
