@@ -33,7 +33,6 @@
   services.xserver = {
     # Enable the X11 windowing system.
     enable = true;
-
     # Enable the Desktop Environment.
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
@@ -52,7 +51,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -64,7 +62,7 @@
 
   # for global user
   users.defaultUserShell=pkgs.zsh;
-
+  nix.trustedUsers = [ "root" "@wheel" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
